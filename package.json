@@ -3,9 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "format": "bunx prettier --write \"**/.devcontainer/devcontainer.json\"",
-    "format:check": "bunx prettier --check \"**/.devcontainer/devcontainer.json\"",
-    "test": "bunx prettier --check \"**/.devcontainer/devcontainer.json\" && bun run ./scripts/test-template.mjs",
+    "format": "bunx prettier --write \"src/**/.devcontainer/devcontainer.json\"",
+    "format:check": "bunx prettier --check \"src/**/.devcontainer/devcontainer.json\"",
+    "test": "bun run format:check && bun run ./scripts/test-template.mjs",
     "purge": "bun run ./scripts/test-purge.mjs"
   },
   "devDependencies": {

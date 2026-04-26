@@ -1,0 +1,6 @@
+{
+  "id": "almalinux10-mise-postgresql",
+  "version": "0.2.0",
+  "name": "AlmaLinux 10 + mise + PostgreSQL",
+  "description": "AlmaLinux 10 development container template with mise installed for the non-root devcontainer user and a companion PostgreSQL service."
+}

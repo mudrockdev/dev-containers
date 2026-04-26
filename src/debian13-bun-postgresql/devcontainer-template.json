@@ -1,0 +1,6 @@
+{
+  "id": "debian13-bun-postgresql",
+  "version": "0.2.0",
+  "name": "Debian 13 + Bun + PostgreSQL",
+  "description": "Debian 13 development container template with Bun installed for the non-root devcontainer user and a companion PostgreSQL service."
+}

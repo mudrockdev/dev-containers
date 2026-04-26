@@ -1,0 +1,35 @@
+name: Publish Dev Container Templates
+
+on:
+  workflow_dispatch:
+    inputs:
+      registry:
+        description: OCI registry to publish to
+        required: true
+        default: ghcr.io
+        type: string
+      namespace:
+        description: OCI namespace prefix, for example your-user/dev-containers
+        required: false
+        default: ""
+        type: string
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Publish templates
+        uses: devcontainers/action@v1.4.3
+        with:
+          publish-templates: "true"
+          base-path-to-templates: "./src"
+          oci-registry-for-templates: ${{ inputs.registry }}
+          templates-namespace: ${{ inputs.namespace }}
+          generate-docs: "false"
+          disable-repo-tagging: "true"

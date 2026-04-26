@@ -1,0 +1,6 @@
+{
+  "id": "almalinux10-mise-mysql",
+  "version": "0.2.0",
+  "name": "AlmaLinux 10 + mise + MySQL",
+  "description": "AlmaLinux 10 development container template with mise installed for the non-root devcontainer user and a companion MySQL service."
+}

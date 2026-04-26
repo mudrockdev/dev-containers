@@ -1,0 +1,33 @@
+{
+  "name": "Ubuntu 26.04 + Bun + MySQL",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "overrideCommand": false,
+  "shutdownAction": "stopCompose",
+  "remoteUser": "devcontainer",
+  "containerUser": "devcontainer",
+  "init": true,
+  "appPort": [3000, 5173, 3306],
+  "forwardPorts": [3000, 5173, 3306],
+  "portsAttributes": {
+    "3000": {
+      "label": "App",
+      "onAutoForward": "notify"
+    },
+    "5173": {
+      "label": "Vite",
+      "onAutoForward": "notify"
+    },
+    "3306": {
+      "label": "MySQL"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

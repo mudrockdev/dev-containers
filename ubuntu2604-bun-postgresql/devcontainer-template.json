@@ -1,6 +1,0 @@
-{
-  "id": "ubuntu2604-bun-postgresql",
-  "version": "0.1.0",
-  "name": "Ubuntu 26.04 + Bun + PostgreSQL",
-  "description": "Ubuntu 26.04 development container template with Bun installed for the non-root devcontainer user and a companion PostgreSQL service."
-}

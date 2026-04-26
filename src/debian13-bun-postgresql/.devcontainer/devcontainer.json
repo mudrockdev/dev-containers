@@ -1,0 +1,33 @@
+{
+  "name": "Debian 13 + Bun + PostgreSQL",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "overrideCommand": false,
+  "shutdownAction": "stopCompose",
+  "remoteUser": "devcontainer",
+  "containerUser": "devcontainer",
+  "init": true,
+  "appPort": [3000, 5173, 5432],
+  "forwardPorts": [3000, 5173, 5432],
+  "portsAttributes": {
+    "3000": {
+      "label": "App",
+      "onAutoForward": "notify"
+    },
+    "5173": {
+      "label": "Vite",
+      "onAutoForward": "notify"
+    },
+    "5432": {
+      "label": "PostgreSQL"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

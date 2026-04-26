@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, "..");
+const templatesRoot = path.join(repoRoot, "src");
 
 class CommandError extends Error {
   constructor(command, status) {
@@ -15,12 +16,12 @@ class CommandError extends Error {
 }
 
 function listComposeTemplates() {
-  return readdirSync(repoRoot, { withFileTypes: true })
+  return readdirSync(templatesRoot, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
     .filter((name) =>
       existsSync(
-        path.join(repoRoot, name, ".devcontainer", "docker-compose.yml"),
+        path.join(templatesRoot, name, ".devcontainer", "docker-compose.yml"),
       ),
     )
     .sort();
@@ -62,7 +63,7 @@ function run(command, args, options = {}) {
 }
 
 function downComposeTemplate(templateName) {
-  const templateDir = path.join(repoRoot, templateName);
+  const templateDir = path.join(templatesRoot, templateName);
   const projectName = `devcontainer-test-${sanitizeName(templateName)}`;
   const composeFile = path.join(
     templateDir,

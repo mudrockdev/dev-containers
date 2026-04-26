@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, "..");
+const templatesRoot = path.join(repoRoot, "src");
 
 class CommandError extends Error {
   constructor(command, status) {
@@ -15,10 +16,10 @@ class CommandError extends Error {
 }
 
 function listTemplates() {
-  return readdirSync(repoRoot, { withFileTypes: true })
+  return readdirSync(templatesRoot, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
-    .filter((name) => existsSync(path.join(repoRoot, name, ".devcontainer", "devcontainer.json")))
+    .filter((name) => existsSync(path.join(templatesRoot, name, ".devcontainer", "devcontainer.json")))
     .sort();
 }
 
@@ -152,7 +153,7 @@ if (!templateName || templateName === "--help" || templateName === "-h") {
   process.exit(templateName ? 0 : 1);
 }
 
-const templateDir = path.join(repoRoot, templateName);
+const templateDir = path.join(templatesRoot, templateName);
 if (!existsSync(templateDir)) {
   console.error(`Unknown template: ${templateName}`);
   console.error("");

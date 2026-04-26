@@ -1,0 +1,6 @@
+{
+  "id": "almalinux10-mise",
+  "version": "0.1.0",
+  "name": "AlmaLinux 10 + mise",
+  "description": "AlmaLinux 10 development container template with mise installed for the non-root devcontainer user."
+}

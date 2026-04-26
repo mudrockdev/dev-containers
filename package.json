@@ -2,5 +2,7 @@
   "name": "dev-containers",
   "type": "module",
   "private": true,
-  "scripts": {}
+  "scripts": {
+    "test": "bun run ./scripts/test-template.mjs"
+  }
 }

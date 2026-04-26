@@ -4,7 +4,7 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - ..:/workspaces:cached
+      - ..:/workspaces/almalinux10-mise-postgresql
     network_mode: service:postgres
     depends_on:
       postgres:

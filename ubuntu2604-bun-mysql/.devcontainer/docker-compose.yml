@@ -4,7 +4,7 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - ..:/workspaces:cached
+      - ..:/workspaces/ubuntu2604-bun-mysql
     network_mode: service:mysql
     depends_on:
       mysql:

@@ -26,3 +26,9 @@ Database defaults:
 
 - MySQL: host `localhost`, port `3306`, database `app`, user `app`, password `app`, root password `root`
 - PostgreSQL: host `localhost`, port `5432`, database `app`, user `app`, password `app`
+
+Testing with Podman:
+
+- `bun run test debian13-bun`
+- `bun run test debian13-bun -- bun --version`
+- `bun run test almalinux10-mise`

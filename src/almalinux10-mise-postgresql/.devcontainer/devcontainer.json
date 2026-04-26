@@ -10,11 +10,6 @@
   "init": true,
   "appPort": [5432],
   "forwardPorts": [5432],
-  "portsAttributes": {
-    "5432": {
-      "label": "PostgreSQL"
-    }
-  },
   "customizations": {
     "vscode": {
       "settings": {

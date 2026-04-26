@@ -13,14 +13,17 @@
   "portsAttributes": {
     "3000": {
       "label": "App",
+      "protocol": "http",
+      "elevateIfNeeded": false,
+      "requireLocalPort": false,
       "onAutoForward": "notify"
     },
     "5173": {
       "label": "Vite",
+      "protocol": "http",
+      "elevateIfNeeded": false,
+      "requireLocalPort": false,
       "onAutoForward": "notify"
-    },
-    "3306": {
-      "label": "MySQL"
     }
   },
   "customizations": {

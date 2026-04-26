@@ -5,8 +5,6 @@
     "context": ".."
   },
   "overrideCommand": false,
-  "remoteUser": "devcontainer",
-  "containerUser": "devcontainer",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "init": true,
   "appPort": [],

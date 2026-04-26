@@ -8,7 +8,7 @@
   "remoteUser": "devcontainer",
   "containerUser": "devcontainer",
   "init": true,
-  "appPort": [5432],
+  "appPort": ["127.0.0.1::5432"],
   "forwardPorts": [5432],
   "customizations": {
     "vscode": {

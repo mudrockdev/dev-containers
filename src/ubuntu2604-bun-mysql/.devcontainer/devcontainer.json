@@ -8,7 +8,7 @@
   "remoteUser": "devcontainer",
   "containerUser": "devcontainer",
   "init": true,
-  "appPort": [3000, 5173, 3306],
+  "appPort": ["127.0.0.1::3000", "127.0.0.1::5173", "127.0.0.1::3306"],
   "forwardPorts": [3000, 5173, 3306],
   "portsAttributes": {
     "3000": {

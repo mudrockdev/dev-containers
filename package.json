@@ -3,6 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "bun run ./scripts/test-template.mjs"
+    "test": "bun run ./scripts/test-template.mjs",
+    "purge": "bun run ./scripts/test-purge.mjs"
   }
 }

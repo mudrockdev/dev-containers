@@ -8,9 +8,7 @@
   "remoteUser": "devcontainer",
   "containerUser": "devcontainer",
   "init": true,
-  "forwardPorts": [
-    5432
-  ],
+  "forwardPorts": [5432],
   "portsAttributes": {
     "5432": {
       "label": "PostgreSQL"

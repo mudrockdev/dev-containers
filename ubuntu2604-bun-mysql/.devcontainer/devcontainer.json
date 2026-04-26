@@ -8,11 +8,7 @@
   "remoteUser": "devcontainer",
   "containerUser": "devcontainer",
   "init": true,
-  "forwardPorts": [
-    3000,
-    5173,
-    3306
-  ],
+  "forwardPorts": [3000, 5173, 3306],
   "portsAttributes": {
     "3000": {
       "label": "App",

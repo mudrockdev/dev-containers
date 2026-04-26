@@ -3,7 +3,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "bun run ./scripts/test-template.mjs",
+    "format": "bunx prettier --write \"**/.devcontainer/devcontainer.json\"",
+    "format:check": "bunx prettier --check \"**/.devcontainer/devcontainer.json\"",
+    "test": "bunx prettier --check \"**/.devcontainer/devcontainer.json\" && bun run ./scripts/test-template.mjs",
     "purge": "bun run ./scripts/test-purge.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3"
   }
 }

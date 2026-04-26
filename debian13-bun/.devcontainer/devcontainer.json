@@ -9,10 +9,8 @@
   "containerUser": "devcontainer",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "init": true,
-  "forwardPorts": [
-    3000,
-    5173
-  ],
+  "appPort": [3000, 5173],
+  "forwardPorts": [3000, 5173],
   "portsAttributes": {
     "3000": {
       "label": "App",

@@ -1,0 +1,11 @@
+{
+  "overrides": [
+    {
+      "files": "**/.devcontainer/devcontainer.json",
+      "options": {
+        "parser": "json",
+        "trailingComma": "none"
+      }
+    }
+  ]
+}
